@@ -1,11 +1,1 @@
-$(function(){$(".sidenav").html($(".hide-on-med-and-down").html()),$(".sidenav").sidenav(),$(".parallax").parallax()});
-$(window).scroll(function() {
-    let navbar = $('nav'), scroll = $(window).scrollTop();
-    if (scroll > 350) {
-        navbar.addClass('fixed');
-        $('.scrollToTop').fadeIn();
-    } else {
-        navbar.removeClass('fixed');
-        $('.scrollToTop').fadeOut();
-    }
-});
+$(function(){$(".sidenav").html($(".hide-on-med-and-down").html()),$(".sidenav").sidenav(),$(".parallax").parallax()}),$(window).scroll(function(){let e=$("nav");$(window).scrollTop()>350?(e.addClass("fixed"),$(".scrollToTop").fadeIn(),$(".sidenav").hide(),$("#nav-mobile").hide(),$(".sidenav-trigger").hide()):(e.removeClass("fixed"),$(".scrollToTop").fadeOut(),$(".sidenav").show(),$("#nav-mobile").show(),$(".sidenav-trigger").show())});
