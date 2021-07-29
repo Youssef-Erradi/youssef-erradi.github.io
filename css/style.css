@@ -7,7 +7,7 @@
 
 :root{
   --navHeight : 8vh;
-  --MinNavHeight : 50px;
+  --MinNavHeight : 3rem;
 }
 
 .container{
@@ -19,12 +19,14 @@
 
 section{
   min-height: 100vh;
+  padding-top: var(--MinNavHeight);
   scroll-snap-align: start;
   color: white;
 }
 
 .hero{
   min-height: 100vh;
+  padding-top: 0;
   scroll-margin-top: 10vh;
   background-image: url('../img/hero-background.jpg');
   background-size: cover;
@@ -99,7 +101,7 @@ section{
   .nav ul{
     position: absolute;
     right: 0;
-    top:  var(--MinNavHeight);
+    top:  var(--navHeight);
 
     height: calc( 100vh - var(--navHeight) );
     width: 50vw;

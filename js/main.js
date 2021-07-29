@@ -5,7 +5,7 @@ const menu      = document.querySelector("#menu")
 const nav       = document.querySelector(".nav ul")
 const links     = document.querySelectorAll(".nav ul li")
 const container = document.querySelector(".container")
-console.log(container)
+
 menu.addEventListener("click", ()=>{
     container.style = `overflow-y: ${nav.classList.toggle("active")?"hidden":"scroll"};`
     links.forEach((link, index)=>{
@@ -16,8 +16,8 @@ menu.addEventListener("click", ()=>{
 
 links.forEach((link) => {
     link.addEventListener("click", ()=>{
-        menu.classList.remove("active")
         menu.classList.remove("close")
-        container.style = `overflow-y: ${nav.classList.toggle("active")?"hidden":"scroll"};`
+        container.style = `overflow-y: scroll;`
+        nav.classList.remove("active")
     })
 })
