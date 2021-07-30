@@ -24,6 +24,12 @@ section{
   color: white;
 }
 
+section .title{
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+}
+
 .hero{
   min-height: 100vh;
   padding-top: 0;
@@ -31,6 +37,12 @@ section{
   background-image: url('../img/hero-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.hero .title{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .nav{
