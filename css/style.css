@@ -8,6 +8,16 @@
 :root{
   --navHeight : 8vh;
   --MinNavHeight : 3rem;
+
+  --section-title-size : 35px;
+}
+
+/* basic styling */
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
 }
 
 /* Full page scroll */
@@ -28,6 +38,7 @@ section{
 section .title{
   display: flex;
   justify-content: center;
+  font-size: var(--section-title-size);
   padding: .5rem;
 }
 
@@ -58,12 +69,10 @@ section .title{
 .nav ul{
   display: flex;
   justify-content: space-evenly;
-  list-style: none;
   width: 60%;
 }
 
 .nav a{
-  text-decoration: none;
   margin: 0 .3rem;
   color: #7EB3FF;
 }
@@ -95,7 +104,7 @@ section .title{
 }
 
 .hero .cta{
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .hero .cta a{
@@ -123,6 +132,28 @@ section .title{
 
 .hero .illustration svg{
   max-width: 40vw;
+}
+
+/* Contact me section */
+.contact .title{
+  margin-bottom: 5rem;
+}
+.contact .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact li{
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact .content img{
+  height: 50px;
+  margin-right: 1rem;
 }
 
 /* Animations */
