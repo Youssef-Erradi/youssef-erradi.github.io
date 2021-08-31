@@ -8,8 +8,13 @@
 :root{
   --navHeight : 8vh;
   --MinNavHeight : 3rem;
-
   --section-title-size : 35px;
+
+  --main-color: #7EB3FF;
+  --blue : #D0EDF5;
+  --black : #231F20;
+  --beige : #F5EEE4;
+  --white : #F3F6FB;
 }
 
 /* basic styling */
@@ -23,7 +28,7 @@ ul{
 /* Full page scroll */
 .container{
   height: 100vh;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -32,7 +37,7 @@ section{
   min-height: 100vh;
   padding-top: var(--MinNavHeight);
   scroll-snap-align: start;
-  color: white;
+  background-color: var(--blue);
 }
 
 section .title{
@@ -43,27 +48,27 @@ section .title{
 }
 
 /* Navigation */
+#menu{
+  display: none;
+}
+
 .nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: var(--navHeight);
   min-height: var(--MinNavHeight);
-  background-color: transparent;
   z-index: 9;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background-color: #F2F8FD;
+  /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); */
+  background-color: var(--blue);
+  padding-top: .5rem;
 }
 
-#menu{
-  display: none;
-}
-
-.nav .logo{
+.nav .logo a{
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #7EB3FF;
+  letter-spacing: 1px;
 }
 
 .nav ul{
@@ -73,8 +78,8 @@ section .title{
 }
 
 .nav a{
+  color: var(--black);
   margin: 0 .3rem;
-  color: #7EB3FF;
 }
 
 /* Hero section */
@@ -82,9 +87,10 @@ section .title{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc( 100vh - var(--navHeight) );
+  min-height: calc( 80vh + var(--navHeight) );
   padding-top: 0;
   scroll-margin-top: calc( 2vh + var(--navHeight));
+  background-color: var(--blue);
 }
 
 .hero .content{
@@ -96,38 +102,46 @@ section .title{
 }
 
 .hero .intro{
-  color: #7EB3FF;
+  color: var(--black);
+}
+
+.hero .intro h1{
+  margin-top: 2rem;;
+  font-size: 2em;
 }
 
 .hero .intro p{
-  max-width: 60vw;
+  font-size: 1.5em;
+  margin: 1em 0 1.75em 0;
 }
 
 .hero .cta{
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .hero .cta a{
   text-decoration: none;
   border: 2px #7EB3FF solid;
-  margin: 1rem;
-  padding: .5rem 1rem;
+  margin: 1.5rem 0;
+  margin-right: 1rem;
+  padding: .5rem 1.25rem;
   border-radius: 1.5rem;
+  font-weight: 500;
 }
 
 .cta a:hover{
-  filter: brightness(97%);
+  filter: brightness(96%);
 }
 
 .cta a.primary{
   background-color: #7EB3FF;
-  color: white;
+  color: var(--white);
 }
 
 .cta a.secondary{
   border: 2px #7EB3FF solid;
   color: #7EB3FF;
-  background-color: white;
+  background-color: transparent;
 }
 
 .hero .illustration svg{
@@ -186,7 +200,7 @@ section .title{
     height: 3px;
     width: 25px;
     margin: 4px;
-    background-color: #7EB3FF;
+    background-color: var(--black);
     transition: all .5s ease;
   }
 

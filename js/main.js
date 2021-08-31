@@ -1,6 +1,3 @@
-document.querySelectorAll("section").forEach((section, index)=>{
-    section.style.backgroundColor = `rgb(23, 113, 241, ${index*.15})`
-})
 const menu      = document.querySelector("#menu")
 const nav       = document.querySelector(".nav ul")
 const links     = document.querySelectorAll(".nav ul li")
