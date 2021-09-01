@@ -11,8 +11,8 @@
   --section-title-size : 35px;
 
   --main-color: #7EB3FF;
-  --blue : #D0EDF5;
-  --black : #231F20;
+  --bg-color : #D0EDF5;
+  --dark-gray : #231F20;
   --beige : #F5EEE4;
   --white : #F3F6FB;
 }
@@ -37,7 +37,7 @@ section{
   min-height: 100vh;
   padding-top: var(--MinNavHeight);
   scroll-snap-align: start;
-  background-color: var(--blue);
+  background-color: var(--bg-color);
 }
 
 section .title{
@@ -59,9 +59,9 @@ section .title{
   height: var(--navHeight);
   min-height: var(--MinNavHeight);
   z-index: 9;
-  /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); */
-  background-color: var(--blue);
-  padding-top: .5rem;
+  background-color: var(--bg-color);
+  filter: brightness(96%);
+  padding: 1rem 0;
 }
 
 .nav .logo a{
@@ -78,8 +78,14 @@ section .title{
 }
 
 .nav a{
-  color: var(--black);
+  color: var(--dark-gray);
+  transition: .5s ease;
   margin: 0 .3rem;
+}
+
+.nav a:hover{
+  transition: .25s ease;
+  color: var(--main-color);
 }
 
 /* Hero section */
@@ -90,7 +96,7 @@ section .title{
   min-height: calc( 80vh + var(--navHeight) );
   padding-top: 0;
   scroll-margin-top: calc( 2vh + var(--navHeight));
-  background-color: var(--blue);
+  background-color: var(--bg-color);
 }
 
 .hero .content{
@@ -102,7 +108,7 @@ section .title{
 }
 
 .hero .intro{
-  color: var(--black);
+  color: var(--dark-gray);
 }
 
 .hero .intro h1{
@@ -130,7 +136,7 @@ section .title{
 }
 
 .cta a:hover{
-  filter: brightness(96%);
+  filter: brightness(95%);
 }
 
 .cta a.primary{
@@ -145,7 +151,7 @@ section .title{
 }
 
 .hero .illustration svg{
-  max-width: 40vw;
+  width: 40vw;
 }
 
 /* Contact me section */
@@ -200,7 +206,7 @@ section .title{
     height: 3px;
     width: 25px;
     margin: 4px;
-    background-color: var(--black);
+    background-color: var(--dark-gray);
     transition: all .5s ease;
   }
 
@@ -209,13 +215,11 @@ section .title{
     right: 0;
     top:  var(--navHeight);
     height: calc( 100vh - var(--navHeight) );
-    width: 50vw;
+    width: 100vw;
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #F2F8FD;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-
+    background-color: var(--bg-color);
   }
   
   .nav li{
@@ -236,8 +240,8 @@ section .title{
   }
 
   .hero .illustration svg{
-    max-width: 85vw;
-    max-height: 50vh;
+    width: 85vw;
+    height: 50vh;
   }
 }
 
