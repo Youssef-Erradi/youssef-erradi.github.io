@@ -8,7 +8,7 @@
 :root{
   --navHeight : 8vh;
   --MinNavHeight : 3rem;
-  --section-title-size : 35px;
+  --section-title-size : 1.75rem;
 
   --main-color: #7EB3FF;
   --bg-color : #D0EDF5;
@@ -38,7 +38,6 @@ ul{
 
 section{
   min-height: 100vh;
-  padding-top: var(--MinNavHeight);
   scroll-snap-align: start;
   background-color: var(--bg-color);
 }
@@ -47,7 +46,7 @@ section .title{
   display: flex;
   justify-content: center;
   font-size: var(--section-title-size);
-  padding: .5rem;
+  padding: 2rem 1rem;
 }
 
 /* Navigation */
