@@ -21,6 +21,7 @@
 a{
   text-decoration: none;
 }
+
 ul{
   list-style: none;
 }
@@ -31,6 +32,8 @@ ul{
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color) var(--bg-color);
 }
 
 section{
