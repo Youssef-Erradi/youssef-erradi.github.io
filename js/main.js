@@ -6,9 +6,9 @@ const container = document.querySelector(".container")
 menu.addEventListener("click", ()=>{
     const isNavActive = nav.classList.toggle("active")
     container.style = `overflow-y: ${isNavActive?"hidden":"scroll"};`
-    // links.forEach((link, index)=>{
-    //     link.style.animation = `linkFade .5s ease forwards  ${index/10}s`
-    // })
+    links.forEach((link, index)=>{
+        link.style.animation = isNavActive?`linkFade .5s ease forwards ${index/10}s`:``
+    })
     menu.classList.toggle("close")
 })
 
