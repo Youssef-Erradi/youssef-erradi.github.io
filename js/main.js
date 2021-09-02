@@ -4,10 +4,11 @@ const links     = document.querySelectorAll(".nav ul li")
 const container = document.querySelector(".container")
 
 menu.addEventListener("click", ()=>{
-    container.style = `overflow-y: ${nav.classList.toggle("active")?"hidden":"scroll"};`
-    links.forEach((link, index)=>{
-        link.style.animation = `linkFade .5s ease forwards ${index/10}s`
-    })
+    const isNavActive = nav.classList.toggle("active")
+    container.style = `overflow-y: ${isNavActive?"hidden":"scroll"};`
+    // links.forEach((link, index)=>{
+    //     link.style.animation = `linkFade .5s ease forwards  ${index/10}s`
+    // })
     menu.classList.toggle("close")
 })
 
