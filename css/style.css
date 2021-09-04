@@ -29,7 +29,8 @@ ul{
 /* Full page scroll */
 .container{
   height: 100vh;
-  scroll-snap-type: y mandatory;
+  background: var(--bg-color);
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   scroll-behavior: smooth;
   scrollbar-width: thin;
@@ -158,6 +159,45 @@ section .title{
   width: 40vw;
 }
 
+/* études section */
+.etudes .content{
+  display: flex;
+  justify-content: center;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+}
+
+.cards li {
+  background: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 80%;
+  min-height: 50vh;
+  margin: 2.5rem auto 0 auto;
+  border-radius: 1.5rem;
+}
+
+.cards li header img{
+  width: 5em;
+  height: 5em;
+  border: .25rem solid var(--white);
+  border-radius: 50%;
+  margin-top: -5rem;
+}
+
+.cards .card-body{
+  text-align: left;
+  margin: 2rem .5rem;
+}
+
+.cards .card-footer{
+  margin-top: 2rem;
+}
+
 /* Contact me section */
 .contact .title{
   margin-bottom: 5rem;
@@ -220,7 +260,6 @@ section .title{
     top:  var(--navHeight);
     height: calc( 100vh - var(--navHeight) );
     width: 100vw;
-    /* display: none; */
     flex-direction: column;
     align-items: center;
     background-color: var(--bg-color);
@@ -228,10 +267,6 @@ section .title{
     -webkit-clip-path: circle(0 at 90% -20%);
     transition: all .75s ease-out;
   }
-
-  /*.nav li{
-    opacity: 0;
-  } */
 
   .nav .active{
     clip-path: circle(250vh at 90% -20%);
@@ -251,6 +286,17 @@ section .title{
   .hero .illustration svg{
     width: 85vw;
     height: 50vh;
+  }
+
+  /* etudes section */
+  .cards{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards li{
+    min-height: unset;
+    margin-bottom: 2rem;
   }
 }
 
