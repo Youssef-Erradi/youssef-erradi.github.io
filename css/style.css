@@ -86,11 +86,16 @@ section .title{
   color: var(--dark-gray);
   transition: .5s ease;
   margin: 0 .3rem;
+  font-weight: bolder;
 }
 
-.nav a:hover{
+.nav ul:hover a{
+  opacity: .5;
+}
+
+.nav ul a:hover{
   transition: .25s ease;
-  color: var(--main-color);
+  opacity: 1;
 }
 
 /* Hero section */
@@ -172,9 +177,12 @@ section .title{
 }
 
 .cards li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: var(--white);
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   width: 80%;
   min-height: 50vh;
   margin: 2.5rem auto 0 auto;
@@ -192,10 +200,6 @@ section .title{
 .cards .card-body{
   text-align: left;
   margin: 2rem .5rem;
-}
-
-.cards .card-footer{
-  margin-top: 2rem;
 }
 
 /* Contact me section */
