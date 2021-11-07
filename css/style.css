@@ -13,7 +13,6 @@
   --main-color: #7EB3FF;
   --bg-color : #D0EDF5;
   --dark-gray : #231F20;
-  --beige : #F5EEE4;
   --white : #F3F6FB;
 }
 
@@ -142,11 +141,11 @@ section .title{
   margin-right: 1rem;
   padding: .5rem 1.25rem;
   border-radius: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .cta a:hover{
-  filter: brightness(95%);
+  filter: brightness(97%);
 }
 
 .cta a.primary{
