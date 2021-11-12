@@ -1,3 +1,5 @@
+import AccordionEffect from "./AccordionEffect.js"
+
 const menu      = document.querySelector("#menu")
 const nav       = document.querySelector(".nav ul")
 const links     = document.querySelectorAll(".nav ul li")
@@ -18,4 +20,8 @@ links.forEach((link) => {
         container.style = `overflow-y: scroll;`
         nav.classList.remove("active")
     })
+})
+
+document.querySelectorAll('details').forEach((el) => {
+    new AccordionEffect(el);
 })
