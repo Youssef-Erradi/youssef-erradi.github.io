@@ -32,16 +32,12 @@
 }
 
 @keyframes move {
-  0% {
-    transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
+  from { transform: translate3d(-90px,0,0);}
+  to   { transform: translate3d(85px,0,0); }
 }
 
 @media (max-width: 768px) {
   .waves {
-    display: none;
+    padding-top: 1rem;
   }
 }
