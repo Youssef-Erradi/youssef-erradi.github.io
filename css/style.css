@@ -422,7 +422,21 @@ section > .title{
   .projets .content{
     grid-template-columns: repeat(1, 1fr);
   }
+
   .competences .content{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill{
+    padding: .5rem .25rem;
+    margin: 1rem .75rem;
+  }
+
+  .skill .description{
+    text-align: left;
+  }
+
+  .skill h2{
+    margin: .5rem 0;
   }
 }
