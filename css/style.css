@@ -7,14 +7,12 @@
 
 :root{
   --navHeight : 8vh;
-  --MinNavHeight : 3rem;
+  --MinNavHeight : 50px;
   --section-title-size : 1.75rem;
-
   --main-color: #7EB3FF;
   --bg-color : #D0EDF5;
   --dark-gray : #231F20;
   --white : #F3F6FB;
-
   --img-width : 36px;
 }
 
@@ -47,13 +45,14 @@ details[open] summary ~ * {
 /* Full page scroll */
 .container{
   height: 100vh;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--main-color) var(--white);
   background: linear-gradient(0deg, var(--bg-color) 0, var(--main-color) 100%);
+  background: var(--bg-color);
 }
 
 section{
@@ -82,8 +81,7 @@ section > .title{
   align-items: center;
   height: var(--navHeight);
   min-height: var(--MinNavHeight);
-  z-index: 9;
-  background-color: rgba(255, 255, 255, .15);
+  background: linear-gradient(180deg, var(--main-color) 0, var(--bg-color) 750%);
   padding: 1rem 0;
 }
 
@@ -189,6 +187,10 @@ section > .title{
   margin-top: -5rem;
 }
 
+.cards li header .card-title{
+  font-size: 1.25rem;
+}
+
 .card-footer, .card-body{
   text-align: left;
 }
@@ -202,6 +204,7 @@ section > .title{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   min-height: 85vh;
+  padding-bottom: 2rem;
 }
 
 .content details {
@@ -210,28 +213,23 @@ section > .title{
   background: linear-gradient(180deg, var(--white) 50%, #FFFFFF 100%);
   border-radius: 1rem;
   overflow: hidden;
-  height: auto;
+  height: min-content;
 }
 
 .content details summary{
   display: flex;
   align-items: center;
-  padding-top: .25rem;
-  height: 120px;
+  padding: .5rem .5rem 0 .5rem;
+  min-height: 125px;
 }
 
 .project .stack{
-  max-width: 30%;
+  max-width: 35%;
   margin-right: .5rem;
 }
 
 .project .title{
   max-width: 65%;
-  margin: auto;
-}
-
-.project title > span {
-  margin-bottom: 1rem;
 }
 
 .project .stack img {
@@ -244,11 +242,45 @@ section > .title{
 .project .title span{
   display: block;
   padding-top: .25rem;
+  margin-bottom: 1rem;
   font-size: 12px;
 }
 
 .project .description{
   padding: .25rem;
+}
+
+/* competences section  */
+.competences{
+  margin-bottom: 2.5rem;
+}
+.competences .content{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: .5rem;
+}
+
+.skill img{
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
+
+.skill h2{
+  margin: .75rem;
+  font-size: 1rem;
+  letter-spacing: .5px;
+}
+
+.skill .description{
+  text-align: justify;
 }
 
 /* Contact me section */
@@ -261,7 +293,6 @@ section > .title{
 
 .contact li{
   display: flex;
-  justify-content: safe;
   align-items: center;
   margin: 3rem;
 }
@@ -291,6 +322,10 @@ section > .title{
 
 /* Media Queries */
 @media screen and (max-width: 960px) {
+  .container{
+    scroll-snap-type: y proximity;
+  }
+
   .nav ul{
     width: 70%;
   }
@@ -301,7 +336,11 @@ section > .title{
 
   .projets .content{
     grid-template-columns: repeat(2, 1fr);
-  } 
+  }
+
+  .competences .content{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -382,5 +421,8 @@ section > .title{
 
   .projets .content{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .competences .content{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
